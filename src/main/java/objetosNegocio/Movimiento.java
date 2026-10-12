@@ -9,6 +9,9 @@ import java.util.Date;
 import java.util.Random;
 
 /**
+ * Representa un movimiento de inventario de la abarrotera.
+ * Contiene información de la clave, fecha y estado
+ * de procesamiento del movimiento.
  *
  * @author rober
  */
