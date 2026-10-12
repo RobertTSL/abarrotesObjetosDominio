@@ -1,7 +1,12 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+
  */
+
+
+
+
 package objetosNegocio;
 
 import static java.lang.Integer.parseInt;
@@ -9,6 +14,9 @@ import java.util.Objects;
 import java.util.Random;
 
 /**
+ * Representa un producto de la abarrotera.
+ * Contiene sus datos generales, constructores,
+ * métodos de acceso y validaciones.
  *
  * @author rober
  */

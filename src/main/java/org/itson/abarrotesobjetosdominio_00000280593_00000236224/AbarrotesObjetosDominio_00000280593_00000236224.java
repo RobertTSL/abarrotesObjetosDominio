@@ -3,8 +3,12 @@
  */
 
 package org.itson.abarrotesobjetosdominio_00000280593_00000236224;
+import objetosNegocio.Producto;
+import objetosNegocio.Movimiento;
 
 /**
+ * Clase principal del proyecto de abarrotes.
+ * Permite ejecutar las pruebas de las clases del sistema.
  *
  * @author Laboratorios
  */
