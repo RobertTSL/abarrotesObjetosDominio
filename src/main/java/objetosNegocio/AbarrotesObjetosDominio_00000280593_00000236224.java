@@ -2,9 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package org.itson.abarrotesobjetosdominio_00000280593_00000236224;
-import objetosNegocio.Producto;
-import objetosNegocio.Movimiento;
+package objetosNegocio;
+
 
 /**
  * Clase principal del proyecto de abarrotes.
