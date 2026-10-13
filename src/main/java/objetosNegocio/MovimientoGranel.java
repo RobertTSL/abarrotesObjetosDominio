@@ -8,8 +8,8 @@ package objetosNegocio;
 import java.util.Date;
 
 /**
- * Representa un movimiento de productos a granel en la abarrotera.
- * Hereda los atributos y métodos de la clase Movimiento.
+ * Representa un movimiento de productos a granel en la abarrotera. Hereda los
+ * atributos y métodos de la clase Movimiento.
  *
  * @author anton
  */
@@ -27,8 +27,8 @@ public class MovimientoGranel extends Movimiento {
     }
 
     /**
-     * Constructor que inicializa los atributos del movimiento
-     * y establece el producto a granel asociado.
+     * Constructor que inicializa los atributos del movimiento y establece el
+     * producto a granel asociado.
      *
      * @param productoGranel Producto a granel asociado al movimiento
      * @param cveMovimiento Clave del movimiento
@@ -49,9 +49,9 @@ public class MovimientoGranel extends Movimiento {
     }
 
     /**
-     * Constructor que recibe solamente la clave del movimiento.
-     * Inicializa los atributos heredados mediante el constructor
-     * de Movimiento y establece el producto a granel en null.
+     * Constructor que recibe solamente la clave del movimiento. Inicializa los
+     * atributos heredados mediante el constructor de Movimiento y establece el
+     * producto a granel en null.
      *
      * @param cveMovimiento Clave del movimiento
      */
@@ -70,8 +70,8 @@ public class MovimientoGranel extends Movimiento {
     }
 
     /**
-     * Establece el producto a granel asociado al movimiento.
-     * Comprueba que la referencia del producto no sea nula.
+     * Establece el producto a granel asociado al movimiento. Comprueba que la
+     * referencia del producto no sea nula.
      *
      * @param productoGranel Nuevo producto a granel del movimiento
      * @throws IllegalArgumentException Si el producto a granel es nulo
@@ -85,9 +85,9 @@ public class MovimientoGranel extends Movimiento {
     }
 
     /**
-     * Devuelve una representación en texto del movimiento a granel.
-     * Incluye los atributos heredados de Movimiento y los datos
-     * del producto a granel, separados por comas.
+     * Devuelve una representación en texto del movimiento a granel. Incluye los
+     * atributos heredados de Movimiento y los datos del producto a granel,
+     * separados por comas.
      *
      * @return Cadena con los atributos del movimiento a granel
      */

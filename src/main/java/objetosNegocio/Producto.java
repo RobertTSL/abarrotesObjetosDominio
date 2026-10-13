@@ -3,10 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
 
  */
-
-
-
-
 package objetosNegocio;
 
 import static java.lang.Integer.parseInt;
@@ -14,9 +10,8 @@ import java.util.Objects;
 import java.util.Random;
 
 /**
- * Representa un producto de la abarrotera.
- * Contiene sus datos generales, constructores,
- * métodos de acceso y validaciones.
+ * Representa un producto de la abarrotera. Contiene sus datos generales,
+ * constructores, métodos de acceso y validaciones.
  *
  * @author rober
  */
@@ -57,10 +52,19 @@ public class Producto {
      * @param unidad Unidad de medida (KG, g, L, PZ)
      */
     public Producto(String numClave, String nombreProducto, char tipo, String unidad) {
-        this.numClave = numClave;
-        this.nombreProducto = nombreProducto;
-        this.tipo = tipo;
-        this.unidad = unidad;
+        if (numClave != null && numClave.matches("[A-Z]{2}[0-9]{3}")) {
+            this.numClave = numClave;
+        }
+        if (nombreProducto != null) {
+            this.nombreProducto = nombreProducto;
+        }
+        if (tipo != ' ' && (tipo == 'E' || tipo == 'G')) {
+            this.tipo = tipo;
+        }
+        if (unidad != null
+                && (unidad.equals("KG") || unidad.equals("g") || unidad.equals("L") || unidad.equals("PZ"))) {
+            this.unidad = unidad;
+        }
     }
 
     /**
