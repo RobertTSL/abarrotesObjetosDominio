@@ -5,9 +5,7 @@
  */
 package objetosNegocio;
 
-import static java.lang.Integer.parseInt;
 import java.util.Objects;
-import java.util.Random;
 
 /**
  * Representa un producto de la abarrotera. Contiene sus datos generales,
@@ -81,7 +79,7 @@ public class Producto {
     }
 
     /**
-     * Constructor de copia.
+     * Constructor copia.
      *
      * @param producto Objeto producto a copiar
      */
@@ -203,13 +201,8 @@ public class Producto {
      */
     @Override
     public int hashCode() {
-        Random rand = new Random();
-        int min = 1;
-        int max = 10;
-
-        int randomNum = rand.nextInt((max - min) + 1) + min;
-        int hash;
-        hash = randomNum;
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.numClave);
         return hash;
     }
 
