@@ -33,7 +33,7 @@ public class ProductoEmpacado extends Producto {
      * @throws IllegalArgumentException Si el producto o la cantidad
      * son inválidos
      */
-    public ProductoEmpacado(int cantidad, Producto producto) {
+    public ProductoEmpacado(Producto producto, int cantidad) {
         super(producto);
 
         if (producto == null || producto.getClave() == null

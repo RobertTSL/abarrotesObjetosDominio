@@ -5,18 +5,15 @@
 package objetosNegocio;
 
 import java.util.Date;
+import java.util.Objects;
 
-import java.util.Random;
 
 /**
- * Representa un movimiento de inventario de la abarrotera.
- * Contiene información de la clave, fecha y estado
- * de procesamiento del movimiento.
  *
  * @author rober
  */
 public class Movimiento {
-
+    static int contador=1;
     /**
      * Clave única del movimiento (formato MV###).
      */
@@ -47,9 +44,9 @@ public class Movimiento {
      * @param procesado Indica si el movimiento ya fue procesado
      */
     public Movimiento(String cveMovimiento, Date fecha, boolean procesado) {
-        //this.cveMovimiento = String.format("MV%03d", contador++);
-        if (cveMovimiento != null && cveMovimiento.matches("MV[0-9]{3}")) {
-            this.cveMovimiento = cveMovimiento;
+        
+        if (cveMovimiento != null && cveMovimiento.matches("MV")) {
+            this.cveMovimiento = String.format("MV%03d", contador++);
         }
         if (fecha != null && !fecha.after(new Date())) {
             this.fecha = fecha;
@@ -65,8 +62,8 @@ public class Movimiento {
      */
     public Movimiento(String cveMovimiento) {
 
-        if (cveMovimiento != null && cveMovimiento.matches("MV[0-9]{3}")) {
-            this.cveMovimiento = cveMovimiento;
+        if (cveMovimiento != null && cveMovimiento.matches("MV")) {
+            this.cveMovimiento = String.format("MV%03d", contador++);
         }
         this.fecha = null;
         this.procesado = false;
@@ -87,8 +84,8 @@ public class Movimiento {
      * @param cveMovimiento Nueva clave del movimiento
      */
     public void setCveMovimiento(String cveMovimiento) {
-        if (cveMovimiento != null && cveMovimiento.matches("MV[0-9]{3}")) {
-            this.cveMovimiento = cveMovimiento;
+        if (cveMovimiento != null && cveMovimiento.matches("MV")) {
+            this.cveMovimiento = String.format("MV%03d", contador++);
         }
     }
 
@@ -160,13 +157,8 @@ public class Movimiento {
      */
     @Override
     public int hashCode() {
-        Random rand = new Random();
-        int min = 1;
-        int max = 10;
-
-        int randomNum = rand.nextInt((max - min) + 1) + min;
-        int hash;
-        hash = randomNum;
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.cveMovimiento);
         return hash;
     }
 
