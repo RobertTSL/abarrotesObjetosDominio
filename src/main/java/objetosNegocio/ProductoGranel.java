@@ -34,7 +34,7 @@ public class ProductoGranel extends Producto {
      * @throws IllegalArgumentException Si el producto o la cantidad
      * son inválidos
      */
-    public ProductoGranel(float cantidad, Producto producto) {
+    public ProductoGranel(Producto producto, float cantidad) {
         super(producto);
 
         if (producto == null || producto.getClave() == null

@@ -24,6 +24,7 @@ public class MovimientoEmpacado extends Movimiento {
      * Constructor por defecto.
      */
     public MovimientoEmpacado() {
+        super();
     }
 
     /**
@@ -36,8 +37,7 @@ public class MovimientoEmpacado extends Movimiento {
      * @param procesado Indica si el movimiento ya fue procesado
      * @throws IllegalArgumentException Si el producto empacado es nulo
      */
-    public MovimientoEmpacado(ProductoEmpacado productoEmpacado,
-            String cveMovimiento, Date fecha, boolean procesado) {
+    public MovimientoEmpacado(String cveMovimiento, Date fecha, boolean procesado, ProductoEmpacado productoEmpacado) {
         super(cveMovimiento, fecha, procesado);
 
         if (productoEmpacado == null) {
