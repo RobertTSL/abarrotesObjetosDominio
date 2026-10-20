@@ -4,14 +4,22 @@
  */
 package objetosNegocio;
 
-import java.util.Date;
+import java.time.LocalDate;
+import static java.time.LocalDate.now;
+
 import java.util.Objects;
 
 
 /**
  *
+ * 
+ * Representa un Movimiento de la abarrotera. Contiene sus datos generales,
+ * constructores, métodos de acceso y validaciones.
  * @author rober
  */
+
+    
+  
 public class Movimiento {
     static int contador=1;
     /**
@@ -22,7 +30,7 @@ public class Movimiento {
     /**
      * Fecha en la que se realizó el movimiento.
      */
-    private Date fecha;
+    private LocalDate fecha;
 
     /**
      * Indica si el movimiento ya fue procesado.
@@ -43,12 +51,12 @@ public class Movimiento {
      * @param fecha Fecha del movimiento (no puede ser futura)
      * @param procesado Indica si el movimiento ya fue procesado
      */
-    public Movimiento(String cveMovimiento, Date fecha, boolean procesado) {
+    public Movimiento(String cveMovimiento, LocalDate fecha, boolean procesado) {
         
         if (cveMovimiento != null && cveMovimiento.matches("MV")) {
             this.cveMovimiento = String.format("MV%03d", contador++);
         }
-        if (fecha != null && !fecha.after(new Date())) {
+        if (fecha != null && !fecha.isAfter(now())) {
             this.fecha = fecha;
         }
         this.procesado = procesado;
@@ -94,7 +102,7 @@ public class Movimiento {
      *
      * @return Fecha del movimiento
      */
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return this.fecha;
     }
 
@@ -104,8 +112,8 @@ public class Movimiento {
      * @param fecha Nueva fecha (no puede ser futura)
      */
 
-    public void setFecha(Date fecha) {
-        if (fecha != null && !fecha.after(new Date())) {
+    public void setFecha(LocalDate fecha) {
+        if (fecha != null && !fecha.isAfter(now())) {
             this.fecha = fecha;
         }
     }
