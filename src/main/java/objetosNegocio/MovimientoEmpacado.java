@@ -1,10 +1,11 @@
-
+ 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package objetosNegocio;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -37,7 +38,7 @@ public class MovimientoEmpacado extends Movimiento {
      * @param procesado Indica si el movimiento ya fue procesado
      * @throws IllegalArgumentException Si el producto empacado es nulo
      */
-    public MovimientoEmpacado(String cveMovimiento, Date fecha, boolean procesado, ProductoEmpacado productoEmpacado) {
+    public MovimientoEmpacado(String cveMovimiento, LocalDate fecha, boolean procesado, ProductoEmpacado productoEmpacado) {
         super(cveMovimiento, fecha, procesado);
 
         if (productoEmpacado == null) {

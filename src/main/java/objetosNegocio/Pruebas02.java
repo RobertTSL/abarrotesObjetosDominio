@@ -3,9 +3,13 @@
  */
 package objetosNegocio;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 /**
+ * Clase prueba del sistema abarrotes
+ * permite verficar el funcionamiento de los constructores,
+ * comparar, validar y asignar. Tambien crear productos y movimientos
  *
  * @author rober
  */
@@ -43,8 +47,8 @@ public class Pruebas02 {
         ProductoEmpacado productoEmpacado2 = new ProductoEmpacado(producto2, 20);
 
         ProductoEmpacado[] empacados = {productoEmpacado1, productoEmpacado2};
-        for (int i = 0; i < empacados.length; i++) {
-            System.out.println(objetos[i]);
+        for (ProductoEmpacado empacado : empacados) {
+            System.out.println(empacado);
         }
 
         System.out.println("Cantidad disponible del producto empacado 2: " + productoEmpacado2.getCantidad() + "Unidades");
@@ -71,8 +75,8 @@ public class Pruebas02 {
             System.out.println("El producto a granel 1 y el producto a granel 2 son diferentes");
         }
 
-        Date hoy = new Date();
-        Date ayer = new Date(hoy.getTime() - (1000 * 60 * 60 * 24));
+        LocalDate hoy = LocalDate.now();
+        LocalDate ayer = hoy.minusDays(1);
 
 // Fecha de ayer
         MovimientoEmpacado movimientoEmpacado1 = new MovimientoEmpacado("MV");

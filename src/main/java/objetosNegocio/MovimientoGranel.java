@@ -5,6 +5,7 @@
  */
 package objetosNegocio;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -37,7 +38,7 @@ public class MovimientoGranel extends Movimiento {
      * @throws IllegalArgumentException Si el producto a granel es nulo
      */
     public MovimientoGranel(ProductoGranel productoGranel,
-            String cveMovimiento, Date fecha, boolean procesado) {
+            String cveMovimiento, LocalDate fecha, boolean procesado) {
 
         super(cveMovimiento, fecha, procesado);
 
